@@ -16,7 +16,7 @@ function LoginPage() {
   });
 
   const handleLogin = () => {
-    if (username === "Jian Ho" && password === "12345") {
+    if (username === "user" && password === "12345") {
       localStorage.setItem("loggedInUser", JSON.stringify({ username }));
       navigate("/home");
     } else {
