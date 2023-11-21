@@ -10,7 +10,7 @@ function Header({ username, onLogout }) {
         <Typography
           variant="h6"
           component={RouterLink}
-          to="/"
+          to="/home"
           color="inherit"
           underline="none"
         >

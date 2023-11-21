@@ -89,7 +89,7 @@ function HomePage() {
 
   const handleLogout = () => {
     localStorage.removeItem("loggedInUser");
-    navigate("/");
+    navigate("/news-app");
   };
   const handleClearFavorites = () => {
     setFavorites([]);
