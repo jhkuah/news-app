@@ -4,3 +4,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
+Login details are
+user
+12345
+
