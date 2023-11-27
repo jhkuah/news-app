@@ -5,23 +5,24 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
 function Header({ username, onLogout }) {
   return (
-    <AppBar position="static">
-      <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
+    <AppBar position="static" className="bg-dark">
+      <Toolbar className="justify-content-between">
         <Typography
           variant="h6"
           component={RouterLink}
           to="/home"
           color="inherit"
           underline="none"
+          className="text-light"
         >
           News App
         </Typography>
         {username && (
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div className="d-flex align-items-center">
             <Chip
               label={`Welcome, ${username}`}
               color="primary"
-              style={{ marginRight: "10px" }}
+              className="me-2"
             />
             <IconButton color="inherit" onClick={onLogout}>
               <ExitToAppIcon />

@@ -1,33 +1,30 @@
 import React from "react";
-import {
-  Typography,
-  List,
-  ListItem,
-  ListItemText,
-  Link,
-  Button,
-} from "@mui/material";
+import { Typography, List, ListItem, Button } from "@mui/material";
 
 function FavoritesPanel({ favorites, onClearFavorites }) {
   return (
-    <div>
-      <Typography variant="h6" gutterBottom>
+    <div className="container mt-4">
+      <Typography variant="h6" className="mb-3">
         Favorites
         <Button
-          variant="outlined"
-          color="secondary"
+          variant="outline-danger"
           onClick={onClearFavorites}
-          style={{ marginLeft: "10px" }}
+          className="ms-2"
         >
           Clear All Favorites
         </Button>
       </Typography>
       <List>
         {favorites.map((article, index) => (
-          <ListItem button key={index}>
-            <Link href={article.url} target="_blank" rel="noopener noreferrer">
-              <ListItemText primary={article.title} />
-            </Link>
+          <ListItem key={index} className="list-group-item">
+            <a
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-decoration-none"
+            >
+              {article.title}
+            </a>
           </ListItem>
         ))}
       </List>

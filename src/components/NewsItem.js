@@ -25,7 +25,7 @@ function NewsItem({ article, onOpenUrl, onToggleFavorite }) {
   };
 
   return (
-    <Card elevation={3} style={newsItemStyle}>
+    <Card className="m-2" elevation={3} style={newsItemStyle}>
       <CardContent style={{ flexGrow: 1 }}>
         <Typography variant="h6" gutterBottom>
           {title}
@@ -45,14 +45,7 @@ function NewsItem({ article, onOpenUrl, onToggleFavorite }) {
           {description}
         </Typography>
       </CardContent>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "8px",
-        }}
-      >
+      <div className="d-flex justify-content-between align-items-center p-2">
         <IconButton onClick={handleToggleFavorite} color="primary">
           <FavoriteIcon />
         </IconButton>

@@ -105,7 +105,7 @@ function HomePage() {
   return (
     <div>
       <Header username={loggedInUser} onLogout={handleLogout} />
-      <Container maxWidth="lg" style={{ marginTop: "16px" }}>
+      <Container className="mt-4">
         <TextField
           label="Search News"
           variant="outlined"
@@ -113,15 +113,11 @@ function HomePage() {
           onChange={(e) => setSearchTerm(e.target.value)}
           fullWidth
         />
-        <Button
-          variant="contained"
-          onClick={handleSearch}
-          style={{ marginTop: "8px" }}
-        >
+        <Button variant="contained" onClick={handleSearch} className="mt-2">
           Search
         </Button>
 
-        <Grid container spacing={2} style={{ marginTop: "16px" }}>
+        <Grid container spacing={2} className="mt-4">
           <Grid item xs={12} md={4}>
             <FavoritesPanel
               favorites={favorites}
@@ -138,7 +134,7 @@ function HomePage() {
               <Button
                 variant="outlined"
                 onClick={handleLoadMore}
-                style={{ marginTop: "8px" }}
+                className="mt-2"
               >
                 Load More
               </Button>

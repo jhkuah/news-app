@@ -25,7 +25,7 @@ function LoginPage() {
   };
 
   return (
-    <Container maxWidth="xs">
+    <Container className="mt-4" maxWidth="xs">
       <Typography variant="h4" align="center" gutterBottom>
         Login
       </Typography>
@@ -51,7 +51,7 @@ function LoginPage() {
         variant="contained"
         fullWidth
         onClick={handleLogin}
-        style={{ marginTop: "16px" }}
+        className="mt-3"
       >
         Login
       </Button>
